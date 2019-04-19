@@ -1,4 +1,4 @@
-<h3 ng-if="!$ctrl.name">#1: Greeter</h3>
+<h3 ng-if="!$ctrl.name">Greeter</h3>
 <h3>
     <greeter ng-if="$ctrl.name"
              name="$ctrl.name">
@@ -13,26 +13,44 @@
 
 <hr>
 
-<h3>#2: Palindrome Checker</h3>
+<h3>Palindrome Checker</h3>
 <div class="app__palindrome-check">
     <palindrome-checker></palindrome-checker>
 </div>
 
 <hr>
 
-<h3>#3: Asynchronous Palindrome Checker</h3>
+<h3>Asynchronous Palindrome Checker</h3>
 <div class="app__palindrome-check">
     <async-palindrome-checker></async-palindrome-checker>
 </div>
 
 <hr>
 
-<h3>#4: Palindrome List Checker</h3>
+<h3>Palindrome List Checker</h3>
 <div class="app__palindrome-check">
     <palindrome-list-checker></palindrome-list-checker>
 </div>
 
 <hr>
 
-<h3 click-counter>#5: Click Counter</h3>
+<h3 click-counter>Click Counter</h3>
 
+<hr>
+
+<h3>Lifecycle Hooks</h3>
+<button class="btn" ng-click="$ctrl.showLifecycleComponent = true" ng-disabled="$ctrl.showLifecycleComponent">
+    Create Component
+</button>
+
+<button class="btn" ng-click="$ctrl.showLifecycleComponent = false" ng-disabled="!$ctrl.showLifecycleComponent">
+    Destroy Component
+</button>
+
+<lifecycle ng-if="$ctrl.showLifecycleComponent" some-value="$ctrl.someValueForLifecycleComponent"></lifecycle>
+
+<input ng-if="$ctrl.showLifecycleComponent"
+       class="form-control"
+       type="text"
+       placeholder="Enter a value and watch $onChanges / $doCheck"
+       ng-model="$ctrl.someValueForLifecycleComponent">
