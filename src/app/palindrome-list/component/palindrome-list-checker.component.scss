@@ -1,0 +1,22 @@
+.palindrome-list-checker {
+    &__input {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+    }
+
+    &__input-name {
+        margin-right: 5px;
+    }
+
+    &__entry {
+        align-items: baseline;
+        display: flex;
+        height: 40px;
+        width: 300px;
+    }
+
+    &__name {
+        width: 220px;
+    }
+}

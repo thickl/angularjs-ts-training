@@ -1,0 +1,17 @@
+<div class="form-group palindrome-checker__input">
+    <input type="text"
+           class="form-control palindrome-checker__input-name"
+           ng-model="$ctrl.name">
+
+    <button class="btn btn-primary"
+            type="button"
+            ng-click="$ctrl.check($ctrl.name)">
+        Check Palindrome
+    </button>
+</div>
+
+<div class="palindrome-checker__output">
+    <textarea class="form-control"
+              placeholder="No check triggered yet..."
+              readonly>{{$ctrl.lastCheck}}</textarea>
+</div>

@@ -1,0 +1,38 @@
+<h3 ng-if="!$ctrl.name">#1: Greeter</h3>
+<h3>
+    <greeter ng-if="$ctrl.name"
+             name="$ctrl.name">
+    </greeter>
+</h3>
+<div class="app__greeter">
+    <input type="text"
+           class="form-control"
+           placeholder="Please enter your name"
+           ng-model="$ctrl.name">
+</div>
+
+<hr>
+
+<h3>#2: Palindrome Checker</h3>
+<div class="app__palindrome-check">
+    <palindrome-checker></palindrome-checker>
+</div>
+
+<hr>
+
+<h3>#3: Asynchronous Palindrome Checker</h3>
+<div class="app__palindrome-check">
+    <async-palindrome-checker></async-palindrome-checker>
+</div>
+
+<hr>
+
+<h3>#4: Palindrome List Checker</h3>
+<div class="app__palindrome-check">
+    <palindrome-list-checker></palindrome-list-checker>
+</div>
+
+<hr>
+
+<h3 click-counter>#5: Click Counter</h3>
+

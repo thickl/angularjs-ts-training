@@ -1,0 +1,44 @@
+<div class="form-group palindrome-list-checker__input">
+    <input type="text"
+           placeholder="Enter Name"
+           class="form-control palindrome-list-checker__input-name"
+           ng-model="$ctrl.input">
+
+    <button class="btn btn-primary"
+            type="button"
+            ng-disabled="!$ctrl.isValidInput($ctrl.input)"
+            ng-click="$ctrl.addName($ctrl.input)">
+        Add Name to List
+    </button>
+</div>
+
+<div class="form-group palindrome-list-checker__input">
+    <ul>
+        <li ng-repeat="name in $ctrl.names track by $index"
+            class="palindrome-list-checker__entry">
+        <span class="palindrome-list-checker__name">
+            {{ name }}
+        </span>
+            <button class="btn btn-danger btn-sm"
+                    ng-click="$ctrl.removeName($index)">
+                Remove
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="form-group palindrome-list-checker__input">
+    <button class="btn btn-primary btn-block"
+            type="button"
+            ng-click="$ctrl.check()">
+        Check Palindromes
+    </button>
+</div>
+
+<div class="palindrome-list-checker__output">
+    <ul>
+        <li ng-repeat="check in $ctrl.lastCheck track by $index">
+            {{ check | palindromeCheck }}
+        </li>
+    </ul>
+</div>
