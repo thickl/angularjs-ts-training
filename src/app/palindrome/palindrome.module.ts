@@ -1,10 +1,10 @@
 import * as angular from 'angular';
 
 import {PalindromeService} from './service/palindrome.service';
-import {palindromeCheckerComponentOptions} from './component/palindrome-checker.component';
+import {palindromeComponentOptions} from './component/palindrome.component';
 
 export const palindromeModule = angular
     .module('palindrome', [])
-    .component('palindromeChecker', palindromeCheckerComponentOptions)
+    .component('palindrome', palindromeComponentOptions)
     .service('palindromeService', PalindromeService)
     .name;

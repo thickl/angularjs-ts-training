@@ -1,5 +1,6 @@
-import {IPalindromeService} from '../service/i-palindrome.service';
 import {IComponentOptions, IOnInit} from 'angular';
+
+import {IPalindromeService} from '../../palindrome/service/i-palindrome.service';
 
 export class PalindromeCheckerComponent implements IOnInit {
     name: string;

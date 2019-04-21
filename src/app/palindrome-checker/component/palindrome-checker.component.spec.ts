@@ -1,7 +1,7 @@
 import * as angular from 'angular';
 import 'angular-mocks';
 import {PalindromeCheckerComponent, palindromeCheckerComponentOptions} from './palindrome-checker.component';
-import {PalindromeServiceMock} from '../service/palindrome.service.mock';
+import {PalindromeServiceMock} from '../../palindrome/service/palindrome.service.mock';
 
 describe('PalindromeCheckerComponent', () => {
     let component: PalindromeCheckerComponent;
