@@ -1,12 +1,23 @@
-import './app.component.scss';
+import {IComponentOptions, IOnInit} from 'angular';
 
-export class AppComponent {
+export class AppComponent implements IOnInit {
     name: string;
     someValueForLifecycleComponent: string;
     showLifecycleComponent: boolean;
+    counter: number;
+
+    setCounter(counter: number): void {
+        this.counter = counter;
+    }
+
+    $onInit(): void {
+        this.counter = 0;
+    }
 }
 
-export const appComponentOptions: ng.IComponentOptions = {
+import './app.component.scss';
+
+export const appComponentOptions: IComponentOptions = {
     templateUrl: './app.component.html',
     controller: AppComponent,
 };

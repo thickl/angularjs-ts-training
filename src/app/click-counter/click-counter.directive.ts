@@ -1,12 +1,24 @@
-export class ClickCounterDirective implements ng.IDirective {
+import {IAttributes, IAugmentedJQuery, IDirective, IRootScopeService} from 'angular';
+
+interface ClickCounterDirectiveScope extends IRootScopeService {
+    onClickCounterChanged(event: { counter: number }): void;
+}
+
+export class ClickCounterDirective implements IDirective {
     restrict = 'A';
     replace = true;
 
-    count: number = 0;
+    scope = {
+        onClickCounterChanged: '&',
+    };
 
-    link(scope: ng.IRootScopeService, element: ng.IAugmentedJQuery, attributes: ng.IAttributes) {
+    counter: number = 0;
+
+    link(scope: ClickCounterDirectiveScope, element: IAugmentedJQuery, attributes: IAttributes) {
         element.on('click', () => {
-            console.log('clicked ' + this.count++ + ' times!');
+            scope.onClickCounterChanged({ counter: ++this.counter });
+            scope.$apply();
         });
     }
+
 }

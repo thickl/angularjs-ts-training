@@ -10,7 +10,13 @@ module.exports = webpackMerge(commonConfig, {
         contentBase: path.join(__dirname, ".tmp"),
         compress: true,
         port: 9000,
-        disableHostCheck: true
+        disableHostCheck: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:4000',
+                pathRewrite: {'^/api': ''}
+            }
+        }
     },
 
     output: {

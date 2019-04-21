@@ -1,5 +1,5 @@
 import {IPalindromeService} from '../service/i-palindrome.service';
-import {IOnInit} from 'angular';
+import {IComponentOptions, IOnInit} from 'angular';
 
 export class PalindromeCheckerComponent implements IOnInit {
     name: string;
@@ -20,7 +20,7 @@ export class PalindromeCheckerComponent implements IOnInit {
 
 import './palindrome-checker.component.scss';
 
-export const palindromeCheckerComponentOptions: ng.IComponentOptions = {
+export const palindromeCheckerComponentOptions: IComponentOptions = {
     templateUrl: './palindrome-checker.component.html',
     controller: PalindromeCheckerComponent,
     bindings: {

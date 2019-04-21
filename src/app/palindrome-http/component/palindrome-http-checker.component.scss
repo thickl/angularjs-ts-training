@@ -1,0 +1,15 @@
+.palindrome-checker {
+    &__input {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+    }
+
+    &__input-name {
+        margin-right: 5px;
+    }
+
+    &__header {
+        margin-top: 10px;
+    }
+}

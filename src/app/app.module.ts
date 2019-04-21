@@ -8,12 +8,14 @@ import {asyncPalindromeModule} from './palindrome-async/async-palindrome.module'
 import {palindromeListModule} from './palindrome-list/palindrome-list.module';
 import {clickCounterModule} from './click-counter/click-counter.module';
 import {lifecycleModule} from './lifecycle/lifecycle.module';
+import {palindromeHttpModule} from './palindrome-http/palindrome-http.module';
 
 export const appModule = angular
     .module('application', [
         greeterModule,
         palindromeModule,
         asyncPalindromeModule,
+        palindromeHttpModule,
         palindromeListModule,
         clickCounterModule,
         lifecycleModule,

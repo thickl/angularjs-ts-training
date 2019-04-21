@@ -27,6 +27,13 @@
 
 <hr>
 
+<h3>Palindrome Http Checker</h3>
+<div class="app__palindrome-check">
+    <palindrome-http-checker></palindrome-http-checker>
+</div>
+
+<hr>
+
 <h3>Palindrome List Checker</h3>
 <div class="app__palindrome-check">
     <palindrome-list-checker></palindrome-list-checker>
@@ -34,7 +41,10 @@
 
 <hr>
 
-<h3 click-counter>Click Counter</h3>
+<h3 click-counter
+    on-click-counter-changed="$ctrl.setCounter(counter)">
+    Click Counter: {{$ctrl.counter}} times
+</h3>
 
 <hr>
 

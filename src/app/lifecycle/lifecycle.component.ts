@@ -1,4 +1,4 @@
-import {IDoCheck, ILogService, IOnChanges, IOnDestroy, IOnInit, IPostLink} from 'angular';
+import {IComponentOptions, IDoCheck, ILogService, IOnChanges, IOnDestroy, IOnInit, IPostLink} from 'angular';
 
 export class LifecycleComponent implements IOnInit, IOnChanges, IDoCheck, IOnDestroy, IPostLink {
 
@@ -39,7 +39,7 @@ export class LifecycleComponent implements IOnInit, IOnChanges, IDoCheck, IOnDes
 
 }
 
-export const lifecycleComponentOptions: ng.IComponentOptions = {
+export const lifecycleComponentOptions: IComponentOptions = {
     templateUrl: './lifecycle.component.html',
     controller: LifecycleComponent,
     bindings: {

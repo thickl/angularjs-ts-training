@@ -1,0 +1,40 @@
+<div class="form-group palindrome-checker__input">
+    <input type="text"
+           class="form-control palindrome-checker__input-name"
+           ng-disabled="$ctrl.loading"
+           ng-model="$ctrl.name">
+
+    <button class="btn btn-primary"
+            type="button"
+            ng-click="$ctrl.check($ctrl.name)"
+            ng-disabled="$ctrl.loading">
+        Check Palindrome
+    </button>
+
+</div>
+<div class="palindrome-checker__output">
+    <textarea class="form-control"
+              placeholder="No check triggered yet..."
+              readonly>{{!$ctrl.loading ? $ctrl.lastCheck : 'Checking input "' + $ctrl.name + '", please stand by...'}}</textarea>
+</div>
+
+<h4 class="palindrome-checker__header">List fetched from server</h4>
+<div class="form-group palindrome-checker__input">
+    <div class="form-check">
+        <input id="includeAllCb"
+               type="checkbox"
+               class="form-check-input"
+               ng-model="$ctrl.includeAll"
+               ng-change="$ctrl.reloadPalindromes($ctrl.includeAll)">
+        <label class="form-check-label" for="includeAllCb">
+            Include all values
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <ul>
+        <li ng-repeat="name in $ctrl.names track by $index">
+            {{name}}
+        </li>
+    </ul>
+</div>

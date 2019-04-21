@@ -1,4 +1,4 @@
-import {IOnInit} from 'angular';
+import {IComponentOptions, IOnInit} from 'angular';
 
 import {IAsyncPalindromeService} from '../service/i-async-palindrome.service';
 import './async-palindrome-checker.component.scss';
@@ -26,7 +26,7 @@ export class AsyncPalindromeCheckerComponent implements IOnInit {
     }
 }
 
-export const asyncPalindromeCheckerComponentOptions: ng.IComponentOptions = {
+export const asyncPalindromeCheckerComponentOptions: IComponentOptions = {
     templateUrl: './async-palindrome-checker.component.html',
     controller: AsyncPalindromeCheckerComponent,
     bindings: {
