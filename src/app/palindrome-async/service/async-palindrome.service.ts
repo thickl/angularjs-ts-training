@@ -7,6 +7,7 @@ export class AsyncPalindromeService implements IAsyncPalindromeService {
     constructor(private $q: IQService,
                 private $timeout: ITimeoutService,
                 private palindromeService: PalindromeService) {
+        'ngInject';
     }
 
     isPalindrome(value: string = ''): IPromise<boolean> {

@@ -6,6 +6,8 @@ export class PalindromeComponent {
     palindrome: boolean;
 
     constructor(private palindromeService: IPalindromeService) {
+        'ngInject';
+
         this.name = 'Thomas';
         this.palindrome = this.palindromeService.isPalindrome(this.name);
     }

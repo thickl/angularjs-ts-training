@@ -9,6 +9,8 @@ export class LifecycleComponent implements IOnInit, IOnChanges, IDoCheck, IOnDes
     checked: boolean;
 
     constructor(private $log: ILogService) {
+        'ngInject';
+
         this.initialized = false;
         this.changes = 0;
         this.checked = false;
@@ -34,7 +36,8 @@ export class LifecycleComponent implements IOnInit, IOnChanges, IDoCheck, IOnDes
     }
 
     $onDestroy(): void {
-        this.$log.info('LifecycleComponent.$onDestroy', '"Called on a controller when its containing scope is destroyed. Use this hook for releasing external resources, watches and event handlers."');
+        this.$log.info('Lifecyc#leComponent.$onDestroy', '"Called on a controller when its containing scope is destroyed. Use this hook for releasing external resources,' +
+            ' watches and event handlers."');
     }
 
 }

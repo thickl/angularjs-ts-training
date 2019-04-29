@@ -7,6 +7,7 @@ export class PalindromeHttpService implements IPalindromeHttpService {
     readonly baseUrl: string = 'palindromes';
 
     constructor(private $http: IHttpService) {
+        'ngInject';
     }
 
     isPalindrome(value: string = ''): IPromise<IsPalindromeResponse> {

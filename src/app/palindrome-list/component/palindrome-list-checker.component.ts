@@ -7,6 +7,7 @@ export class PalindromeListCheckerComponent implements IOnInit {
     lastCheck: PalindromeCheckModel[];
 
     constructor(private palindromeService: IPalindromeService) {
+        'ngInject';
     }
 
     $onInit(): void {

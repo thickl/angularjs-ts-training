@@ -9,6 +9,7 @@ export class AsyncPalindromeCheckerComponent implements IOnInit {
     lastCheck: string;
 
     constructor(private asyncPalindromeService: IAsyncPalindromeService) {
+        'ngInject';
     }
 
     $onInit(): void {

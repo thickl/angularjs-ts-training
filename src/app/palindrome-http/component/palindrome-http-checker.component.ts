@@ -8,6 +8,7 @@ export class PalindromeHttpCheckerComponent implements IOnInit {
     includeAll: boolean;
 
     constructor(private palindromeHttpService: IPalindromeHttpService) {
+        'ngInject';
     }
 
     $onInit(): void {
